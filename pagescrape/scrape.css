@@ -1,0 +1,25 @@
+h1      { font-size: 17pt;
+          background-color: black;   
+          color: gold;
+          text-align: center;
+}
+iframe  {
+          width: 100%;
+          height: 100%;
+          border-width: 0;
+}
+html, body {
+        height: 100%;
+}
+em      {
+        color: red;
+}
+.cleft   { float: left; 
+           width: 49.5%; 
+           background-color: lightgoldenrodyellow;
+}
+.cright  { float: right; 
+           width: 49.5%; 
+           background-color: lightgoldenrodyellow;
+           text-align: right;
+}
