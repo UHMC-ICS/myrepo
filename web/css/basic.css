@@ -5,7 +5,7 @@ body {
 }
 
 img {
-     width: 250px;
+     width: 300px;
      height: auto;
 }
 
@@ -42,14 +42,22 @@ header {
 }
 
 .column_left {
-    width: 55%;
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin: 15px;
+}
+
+
+.column_middle {
+    width: 40%;
     height: 100%;
     float: left;
     margin: 15px;
 }
 
 .column_right {
-    width: 30%;
+    width: 25%;
     height: 100%;
     float: left;
     margin: 15px;

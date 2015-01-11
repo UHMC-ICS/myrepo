@@ -92,8 +92,8 @@
 
 #vid1:hover
 {
-    -webkit-transform: scale(3, 3) translate(-150px, 0px); 
-    -moz-transform: scale(6, 6) translate(100px, -20px); 
-    -o-transform: scale(6, 6) translate(100px, -20px); 
-    transform: scale(6, 6) translate(100px, -20px); 
+    -webkit-transform: scale(3, 3) translate(-100px, -20px); 
+    -moz-transform: scale(3, 3) translate(-100px, -20px); 
+    -o-transform: scale(3, 3) translate(-100px, -20px); 
+    transform: scale(3, 3) translate(-100px, -20px); 
 }
