@@ -1,0 +1,109 @@
+            p       {  
+                        margin-left: 5px;
+                        text-align: justify;
+                        font-family: verdana, geneva, sans-serif; 
+                    }
+                       
+            section { 
+                        border: 1px groove;
+                    }
+            
+            header  {   
+                        font-family: arial, helvetica, sans-serif;
+                        width: 100%;
+                    }
+            
+            h1      {
+                        margin-left: 5px;
+                        text-align: center;
+                        text-shadow: 2px 2px 10px dimgray;
+                    }
+                    
+            img     {
+                        box-shadow: 5px 5px 10px dimgray;
+                    }
+                    
+            em      {
+                        color: red; 
+                    }
+            
+            #myVideo {  
+                        margin-left: 5px;
+                        text-align: justify;
+                        font-family: verdana, geneva, sans-serif; 
+                    }
+                       
+            #hdr    {   
+                        font-size: 2.5em;
+                    }            
+            
+            .fade   {
+                        position: absolute;
+                        -webkit-animation: meltingImage linear 5s 2s infinite alternate;
+                    }
+            
+            @-webkit-keyframes meltingImage
+                    {
+                        0%      {opacity: 1;}
+                        25%     {opacity: 1;}
+                        45%     {opacity: 1;}
+                        50%     {opacity: 0.5;}
+                        55%     {opacity: 0;}
+                        75%     {opacity: 0;}
+                        100%    {opacity: 0;}
+                    }
+            
+            canvas {
+                position: relative; 
+             }
+             
+            .cleft  {   
+                        padding-left: 2px;
+                        width: 49.5%;
+                        float: left; 
+                    }
+                       
+            .cright {   
+                        padding-left: 2px;
+                        float: left; 
+                        width: 49.5%;
+                    }
+
+            .hleft  {   
+                        padding-left: 2px;
+                        width: 70%;
+                        float: left; 
+                    }
+
+            .hright {   
+                        padding-left: 2px;
+                        float: left; 
+                        width: 29%;
+                    }
+
+            .ileft  {   
+                        padding-left: 2px;
+                        width: 60%;
+                        float: left; 
+                    }
+
+            .iright {   
+                        padding-left: 2px;
+                        float: left; 
+                        width: 39%;
+                    }
+
+            .transleft {
+                  float: left; 
+                  width: 30%; 
+            }
+            
+            #transmiddle {
+                  float: left; 
+                  width: 30%; 
+            }
+            
+            #transright {
+                  float: left; 
+                  width: 30%; 
+            }

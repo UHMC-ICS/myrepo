@@ -1,0 +1,36 @@
+.moveH1  { 
+            float: left;
+            position: relative;
+            top: 0px;
+            left: 150px;
+            z-index: 2;
+            color: gold;
+            text-shadow: 2px 2px 2px black; /* add shadow */
+            -webkit-animation: movingText linear 10s 1s infinite normal;
+        }
+
+.moveImg {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            -webkit-animation: movingImage linear 10s 1s infinite normal;
+        }
+
+@-webkit-keyframes movingImage 
+        {
+            0%   {left: 0px; top: 0px;}
+            25%  {left: 100px; top: 0px;}
+            50%  {left: 200px; top: 0px;}
+            75%  {left: 100px; top: 0px;}
+            100% {left: 0px; top: 0px;}
+        }
+
+@-webkit-keyframes movingText
+        {
+            0%   {left: 150px; top: 0px;}
+            25%  {left: 50px; top: 50px;}
+            50%  {left: 0px; top: 100px;}
+            75%  {left: 50px; top: 50px;}
+            100% {left: 150px; top: 0px;}
+        }

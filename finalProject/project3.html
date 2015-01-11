@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<!-- Final Project. -->
+
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>ICS-200 Final Project</title>
+        <link rel="stylesheet" type="text/css" href="project3.css">
+        <link rel="stylesheet" type="text/css" href="animation.css">
+        <script src = "project3.js"></script>
+        <script src = "image.js"></script>
+        <script src = "title.js"></script>
+        <script src = "transform.js"></script>
+    </head>
+    <body id="myBody">
+        <header>
+            <section class="hleft">
+                <h1 id="hdr" name="title">ICS-200 Final Project</h1>
+            </section>
+            <section class="hright">
+                <p>
+                <label>Select <em>background color</em>: </label>
+                <select id="myColor" onchange="changeBkgColor(value)">
+                    <option value="khaki">khaki</option>
+                    <option value="gold">gold</option>
+                    <option value="lightsalmon">light salmon</option>
+                    <option value="lightseagreen">light sea grean</option>
+                    <option value="powderblue">powder blue</option>
+                </select><br>
+                <label>Select <em>title color</em>: </label>
+                <select id="myColor" onchange="changeTitleColor(value)">
+                    <option value="black">black</option>
+                    <option value="red">red</option>
+                    <option value="navy">navy</option>
+                    <option value="brown">brown</option>
+                    <option value="maroon">maroon</option>
+                </select><br>
+                <label>Select <em>font style</em>: </label>
+                <select id="myFont" onchange="changeFont(value)">
+                    <option value="serif">serif</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="cursive">cursive</option>
+                    <option value="fantasy">fantasy</option>
+                    <option value="monospace">monospace</option>
+                </select><br>
+                <label>Select <em>shadow</em>: 
+                    1px <input type="range" min="1" max="100" value="1" onchange="changeShadow(value)"> 100px
+                </label>
+                </p>
+            </section>
+        </header>
+        <section class="cleft">
+            <section>
+                <h1 name="title">Melting Images</h1>
+                <figure>
+                    <img class = "fade" src = "http://mauinow.com/files/2011/08/UHMC_Wellness_Center.jpg" alt = "UHMC Wellness Center" width="240" height="180"/>
+                    <img src = "http://farm9.staticflickr.com/8026/7584295988_585a987c56_c.jpg" alt = "UHMC Wellness Center" width="240" height="180"/>
+                </figure>
+            </section>
+            <section>
+                <h1 name="title">Animation</h1>
+                <h1 name="title" class="moveH1">UH Maui College</h1>
+                <img class="moveImg" src = "http://maui.hawaii.edu/about/images/aerial_Iao9949_F.gif" width = "225" height = "150" alt = "UH Maui College">
+            </section>
+            <section>
+                <h1 name="title">Image Manipulation</h1>
+                <div class="ileft">
+                    <canvas id="thecanvas"></canvas>
+                </div>
+                <div class="iright">
+                    <label>Red: 0 <input id = "redRange" type = "range" max = "500" value = "100"> 500%</label><br>
+                    <label>Green: 0 <input id = "greenRange" type = "range" max = "500" value = "100"> 500%</label><br>
+                    <label>Blue: 0 <input id = "blueRange" type = "range" max = "500" value = "100"> 500%</label><br>
+                    <label>Alpha: 0 <input type = "range" max = "255" value = "255" onchange="processAlpha(value)"> 255</label><br>
+                    <input id = "resetButton" type = "button" value = "Reset Image" onclick="resetImage()"><br>
+                </div>
+            </section>
+        </section>
+        <section class="cright">
+            <section>
+                <h1 name="title">Skew Text</h1>
+                <canvas id="skewText"></canvas><br>
+                <label><em>Skew</em>: 
+                    left <input type="range" min="1" max="100" value="50" onchange="skew(value)"> right
+                </label>
+            </section>
+            <section>
+                <h1 name="title">Rotate Object</h1>
+                <canvas id="rotateObj"></canvas><br>
+                <label><em>Rotate</em>: 
+                    left <input type="range" min="0" max="360" value="0" onchange="rotate(value)"> right
+                </label>
+            </section>
+            <section>
+                <h1 name="title">Scale Image</h1>
+                <canvas id="scaleImg"></canvas><br>
+                <label><em>Scale</em>: 
+                    1x <input type="range" min="1" max="100" value="1" onchange="scale(value)"> 5x
+                </label>
+            </section>
+        </section>
+        <section>
+            <h1 name="title">Videos</h1>
+            <label>Select a video from:</label>
+            <select id="myColor" onchange="changeVideo(value)">
+                <option value="http://www.youtube.com/embed/VIrBecB746c?rel=0">aquarium</option>
+                <option value="http://www.youtube.com/embed/BTZcyTy15Jk?rel=0">fireplace</option>
+            </select>
+            <div>
+                <iframe id="myVideo" width="560" height="315" src="http://www.youtube.com/embed/VIrBecB746c?rel=0" frameborder="0"></iframe>
+            </div>
+        </section>
+    </body>
+</html>
