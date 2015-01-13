@@ -1,0 +1,65 @@
+html, body {
+    height: 98.5%;
+    width: 100%;
+}
+
+.left-side {
+    float: left;
+    height: 100%;
+    width: 70%;
+    margin: 2px;
+}
+
+.right-side {
+    float: left;
+    height: 100%;
+    width: 29%;
+    margin: 2px;
+    overflow: hidden;
+}
+
+.right-side-half {
+    float: left;
+    height: 49%;
+    width: 100%;
+    margin: 2px;
+}
+
+h2, h4 {
+    margin: 2px;
+    text-align: center;
+}
+
+#boxRoute, #boxPlace, #boxSearch, #boxHandiVan {
+    -webkit-transition: 1s ease-out;
+    transition: 1s ease-out;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 0%;
+    overflow: hidden;
+    padding: 2px;
+    background-color: lightgray;
+    width: 98%;
+}
+
+#radio-menu {
+    color: white;
+    font-family: arial, verdana, "san serif";
+    background-color: royalblue;
+    border-radius: 10px;
+    width: 97%;
+    padding: 5px;
+    margin: 2px;
+}
+
+#radio-menu > label {
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+}
+
+#radio-menu > label:hover { 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}

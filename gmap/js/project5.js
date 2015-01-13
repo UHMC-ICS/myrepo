@@ -3,7 +3,6 @@ function GIS() {
 //--- Object attributes
 var geocoder = null;
 var gmMain = null;
-var gmStreet = null;
 var apikey = null;
 
 var that = this;
@@ -15,7 +14,6 @@ this.init = function() {
 
     // Bus route view
     that.gmMain = document.getElementById('gmMain');
-    that.gmStreet = document.getElementById('gmStreet');
 
     document.getElementById('layer1').addEventListener('click', that.showLayer, false);
 
@@ -26,11 +24,12 @@ this.init = function() {
     // Search view
     document.getElementById('layer3').addEventListener('click', that.showLayer, false);
     document.getElementById('btnSearch').addEventListener('click', that.showSearch, false);
-
+    that.showRoute("Kahului", "Wailuku");
+    
     // Handi-Van view
     document.getElementById('layer4').addEventListener('click', that.showLayer, false);
     document.getElementById('btnHandiVan').addEventListener('click', that.showHandiVan, false);
-    
+
     document.getElementById('boxRoute').setAttribute("style","height: 87%");
     that.showRoute("Kahului", "Wailuku");
 }
@@ -110,22 +109,12 @@ this.showHandiVan = function() {
     that.showRoute(fromAddress, toAddress);
 }
 
-this.showStreet = function(address) {
-    var url = "https://www.google.com/maps/embed/v1/streetview";
-    var heading = "&heading=210";
-    var pitch = "&pitch=10";
-    var fov = "&fov=35";
-    var loc = "&location=" + address;
-    that.gmStreet.setAttribute("src",url+that.apikey+loc+heading+pitch+fov);
-}
-
 this.codeAddress = function(address) {
     that.geocoder.geocode({
         'address': address
     }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             var loc = results[0].geometry.location.toString();
-            that.showStreet(loc.substring(1,loc.length-1));
         } else {
             alert("Geocode was not successful for the following reason: " + status);
         }
