@@ -5,25 +5,16 @@
 <head>
     <meta charset="utf-8">
     <title>Demo HTML</title>
-    
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" type="text/css" href="css/basic.css">
     <script type="text/javascript" src="js/basic.js"></script>
 </head>
 
 <body>
-
-    <!-- Start of Header -->
     <header>
         <h1 id="title" class="moveH1">Summer Bridge 2014!</h1>
     </header>
-    <!-- End of Header -->    
-
-    <!-- Start of Left Column -->
     <div class="column_left">
-
-        <!-- section #1:  Slide Show -->
-
         <p id="para1" class="section_title">
             Hover mouse over image...
         </p>
@@ -34,79 +25,39 @@
            </div>
         </section>
 
-        <!-- End of section #1 -->
-
-        <!-- section #2:  Rotate, Scale, & Translate -->
-
         <p id="para2" class="section_title">
             Hover mouse over image...
         </p>
         <section id="sect2">
            <img id="img3" src="img/surf3.jpg" alt="image #3">
-          <img id="img4" src="img/NeverEndingWave.gif" alt="image #4"
+          <img id="img4" src="img/NeverEndingWave.gif" alt="image #4">
         </section>
-
-        <!-- End of section #2 -->
-
     </div>
-
-    <!-- End of Left Column -->    
-    
-    <!-- Start of Middle Column -->
-
     <div class="column_middle">
-    
-        <!-- section #3:  YouTube video selection -->
-
         <p id="para3" class="section_title">
-            Youtube Video Search...
+            <label><input id="layer1" name="mapLayers" type="radio" checked>Youtube Video Search...</label>
         </p>
-        <section class="section_content">
-            <iframe height="auto" width="100%" src="adv/video.html" frameborder="0"></iframe>
-        </section>
-
-        <!-- End of section #3 -->
-
-        <!-- section #4:  Interactive Cube simulation -->
+        <iframe id="youtube" src="adv/video.html" frameborder="0"></iframe>
 
         <p id="para4" class="section_title">
-            Interactive Cube... drag mouse across cube!...
+            <label><input id="layer2" name="mapLayers" type="radio">Interactive Cube... drag mouse across cube!...</label>
         </p>
-        <section class="section_content">
-            <iframe height="auto" width="100%" src="adv/cube.html" frameborder="0"></iframe>
-        </section>
-
-        <!-- End of section #4 -->
-
-        <!-- section #5: Ocean simulation -->
+        <iframe id="cube" src="adv/cube.html" frameborder="0"></iframe>
 
         <p id="para5" class="section_title">
-            Ocean Simulation... drag mouse across ocean!...
+            <label><input id="layer3" name="mapLayers" type="radio">Ocean Simulation... drag mouse across ocean!...</label>
         </p>
-        <section class="section_content">
-            <iframe height="auto" width="100%" src="adv/ocean.html" frameborder="0"></iframe>
-        </section>
-
-        <!-- End of section #5 -->
-        
+        <iframe id="ocean" src="" frameborder="0"></iframe>
     </div>
-
-    <!-- End of Middle Column -->    
-
-    <!-- Start of Right Column -->
-
     <div class="column_right">
         <p class="section_title">Change header title...</p>
         <section class="section_content">
             <textarea id="txtHdr" name = "comments" rows = "4" cols = "37"></textarea>
             <input id="btnHdr" type = "button" value = "Save changes" onclick="changeText()" />
         </section>
-        
-    
         <p class="section_title">Play a video...</p>
         <iframe id="vid1" width="100%" height="auto" src="https://www.youtube.com/embed/VIrBecB746c?rel=0" frameborder="0">
         </iframe>
-        
         <p class="section_title">
             <select onchange="changeMusic(value)">
                 <option value="" selected>Play music...</option>
@@ -119,9 +70,6 @@
             Your browser does not support the audio tag.
         </audio>
     </div>
-
-    <!-- End of Right Column -->
-    
 </body>
 
 </html>

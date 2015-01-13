@@ -19,10 +19,13 @@ img {
     font: italic bold 12px/30px verdana, geneva, sans-serif;
 }
 
-.section_content {
-    border: 1px solid skyBlue;
-    background-color: cornsilk;
-    box-shadow: 10px 10px 10px dimgray;
+#youtube, #cube, #ocean {
+    -webkit-transition: 1s ease-out;
+    transition: 1s ease-out;
+    overflow: hidden;
+    background-color: lightgray;
+    height: 0px;
+    width: 100%;
 }
 
 header {
@@ -48,10 +51,8 @@ header {
     margin: 15px;
 }
 
-
 .column_middle {
     width: 40%;
-    height: 100%;
     float: left;
     margin: 15px;
 }
