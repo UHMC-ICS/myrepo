@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Project #7</title>
+    <link rel="stylesheet" type="text/css" href="css/project7.css">
+    <script type="text/javascript" src="js/project7.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCckMCTYOqMly5Ye8HAa74ijG69vOzBz8Q" type="text/javascript"></script>
+</head>
+
+<body>
+    <iframe id="gmMain" class="left-side" src=""></iframe>
+    <section class="right-side">
+        <iframe id="gmStreet" class="right-section" src=""></iframe>
+        <div class="radio-section" onchange="gis.showPanel()">
+            <label>
+                <input id="rb1" name="mapData" type="radio" checked>Bus Route</label>
+            <label>
+                <input id="rb2" name="mapData" type="radio">Places</label>
+            <label>
+                <input id="rb3" name="mapData" type="radio">Search</label>
+            <label>
+                <input id="rb4" name="mapData" type="radio">Paratransit</label>
+        </div>
+        <div class="right-section">
+            <div class="panel">
+                <div id="panelRoute">
+                    <label>Select route: </label>
+                    <select id="myRoute" onchange="gis.showRoute(value)">
+                        <option value="Kahului,Wailuku">#1: Kahului to Wailuku</option>
+                        <option value="Kahului,Maalaea">#2: Kahului to Ma'alaea</option>
+                        <option value="Kahului,Kihei">#3: Kahului to Kihei</option>
+                        <option value="Kahului,Lahaina">#4: Kahului to Lahaina</option>
+                        <option value="Kahului,Pukalani">#5: Kahului to Pukalani</option>
+                    </select>
+                </div>
+                <div id="panelPlace">
+                    <input id="btnPlace" type="button" value="Find" onclick="gis.showPlace()">
+                    <input id="idPlace" type="text" value="Kahului, HI">
+                </div>
+                <div id="panelSearch">
+                    <input id="btnSearch" type="button" value="Search" onclick="gis.showSearch()">
+                    <input id="idSearch" type="text" value="Kahului, HI">
+                    <br>
+                    <br>
+                    <label>
+                        <input id="rbBus" name="mapSearch" type="radio" checked>Bus Stops</label>
+                    <br>
+                    <label>
+                        <input id="rbRest" name="mapSearch" type="radio">Restaurants</label>
+                    <br>
+                    <label>
+                        <input id="rbHosp" name="mapSearch" type="radio">Hospitals</label>
+                    <br>
+                </div>
+                <div id="panelTransit">
+                    <table>
+                        <tr>
+                            <td>Pickup:</td>
+                            <td>
+                                <input id="idPickup" type="text" value="Kahului, HI">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Drop-off:</td>
+                            <td>
+                                <input id="idDropoff" type="text" value="Kahului, HI">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input id="btnTransit" type="button" value="Schedule" onclick="gis.showTransit()">
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="text/javascript">
+    var gis = new GIS();
+    gis.init();
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MEO ParaTransit</title>
+    <link rel="stylesheet" type="text/css" href="css/transit.css">
+    <script type="text/javascript" src="js/transit.js"></script>
+</head>
+
+<body>
+    <section>
+        <h1>MEO ParaTransit Schedule</h1>
+        <div>
+            <label>Route</label>
+            <select id="dataSrc" onclick="json.requestJSON(value)">
+                <option value="WailukuLoopRoute1.json" selected>Wailuku Loop Route #1</option>
+                <option value="WailukuLoopRoute2.json">Wailuku Loop Route #2</option>
+            </select>
+            <div class="radio-section">
+                <label>
+                    <input id="rb1" name="grpDB" type="radio" value="db?table=instructor&fields=*" onclick="json.requestDB2(value)">Instructors</label>
+                <label>
+                    <input id="rb2" name="grpDB" type="radio" value="db?table=course&fields=*" onclick="json.requestDB(value)">Courses</label>
+                <label>
+                    <input id="rb3" name="grpDB" type="radio" value="MauiBus.pdf" onclick="json.requestPDF(value)">Maui Bus PDF</label>
+            </div>
+        </div>
+        <p>
+            <div id="response"></div>
+        </p>
+    </section>
+</body>
+<script type="text/javascript">
+    var json = new MyAJAX();
+    json.init("meo/");
+</script>
+</html>
